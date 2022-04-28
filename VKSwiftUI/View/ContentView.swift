@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
         VStack {
             VkLogo()
                 .padding(.top, 150)
@@ -37,6 +36,7 @@ struct VkLogo: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 150.0, alignment: .center)
+                .debug()
             Spacer()
         }
     }
