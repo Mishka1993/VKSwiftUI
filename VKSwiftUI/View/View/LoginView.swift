@@ -1,13 +1,26 @@
 //
-//  ContentView.swift
+//  LoginView.swift
 //  VKSwiftUI
 //
-//  Created by Михаил Киржнер on 25.04.2022.
+//  Created by Михаил Киржнер on 02.05.2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct LoginView: View {
+    
+    @Binding var isLogin: Bool
+    @State private var loginText = ""
+    @State private var passwordText = ""
+    @State private var showingAlert = false
+    
+    private func checkLogin() -> Bool {
+        if loginText == "Admin" && passwordText == "Admin" {
+            return true
+        }
+        return false
+    }
+    
     var body: some View {
         VStack {
             VkLogo()
@@ -19,7 +32,7 @@ struct ContentView: View {
             }
             .padding(.top, 50)
             .padding([.leading, .horizontal])
-            VkButtonLogin()
+            buttonLogin
                 .padding(.top, 50)
             Spacer()
         }
@@ -48,7 +61,8 @@ struct VkInputLoginField: View {
     var body: some View {
         TextField("Email или телефон", text: $loginText)
             .textFieldStyle(.roundedBorder)
-            
+            .ignoresSafeArea(.keyboard)
+        
     }
 }
 
@@ -58,29 +72,33 @@ struct VkInputPasswordField: View {
     var body: some View {
         TextField("Пароль", text: $passwordText)
             .textFieldStyle(.roundedBorder)
+            .ignoresSafeArea(.keyboard)
     }
 }
 
-struct VkButtonLogin: View {
-    var body: some View {
+extension LoginView  {
+    var buttonLogin: some View {
         Button {
-            print("Test")
+            if checkLogin() {
+                isLogin = true
+            } else {
+                showingAlert = true
+            }
         } label: {
             Text("Войти")
                 .font(.headline)
                 .bold()
         }
-        .frame(width: 200, alignment: .center)
-        .padding(.all, 8)
-        .background(Color(red: 0.155, green: 0.528, blue: 0.96))
-        .foregroundColor(Color.white)
-        .clipShape(Capsule())
-        
+        .buttonStyle(VkButtonStyle())
+        .alert(isPresented: $showingAlert) {
+                     Alert(title: Text("Error message"), message: Text("Login or password incorrect"),
+                           dismissButton: .default(Text("Ok!")))
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView(isLogin: .constant(true))
     }
 }
