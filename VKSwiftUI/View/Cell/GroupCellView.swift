@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct GroupCellView: View {
+    
+    var group: Group
+    
+    init(group: Group) {
+        self.group = group
+    }
+    
     var body: some View {
         HStack(alignment: .lastTextBaseline){
             groupAvatar
@@ -31,14 +38,14 @@ private extension GroupCellView {
     }
     
     var groupName: some View {
-        Text("Apple User Group")
+        Text(group.name)
             .font(.system(size: 18))
             .bold()
             .lineLimit(1)
     }
     
     var groupDescription: some View {
-        Text("People who use Apple technologies have joined together in user groups all around the world. Hundreds of groups offer members the chance to become friends with other Apple product users, get questions answered and have a lot of fun. Groups are for everyone from first-time computer users to experts—from every profession, background and age. Want technology to do more for you? Join the club. Find a user group near you.")
+        Text(group.description)
             .font(.subheadline)
             .multilineTextAlignment(.leading)
             .lineLimit(3)
@@ -46,7 +53,8 @@ private extension GroupCellView {
 }
 
 struct GroupCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupCellView()
-    }
-}
+     static var previews: some View {
+         GroupCellView(group: groupDemoData.items.first!)
+             .previewLayout(PreviewLayout.sizeThatFits)
+     }
+ }

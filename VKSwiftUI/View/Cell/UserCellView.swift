@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct UserCellView: View {
-    var body: some View {
-        UserCell()
+    
+    var friend: Friend
+    
+    init(friend: Friend){
+        self.friend = friend
     }
-}
-
-struct UserCell: View {
     
     var body: some View {
         HStack(spacing: 15){
@@ -28,7 +28,7 @@ struct UserCell: View {
     }
 }
 
-private extension UserCell {
+private extension UserCellView {
     
     var userAvatar: some View {
         Image("User_Avatar")
@@ -38,13 +38,13 @@ private extension UserCell {
     }
     
     var userFio: some View {
-        Text("Mikhail Kirzhner")
+        Text(friend.fullName)
             .font(.title)
             .lineLimit(1)
     }
     
     var userLogin: some View {
-        Text("mikhail_K@")
+        Text(friend.nickName ?? "")
             .font(.body)
             .foregroundColor(.gray)
             .lineLimit(1)
@@ -53,6 +53,7 @@ private extension UserCell {
 
 struct UserCellView_Previews: PreviewProvider {
     static var previews: some View {
-        UserCellView()
+        UserCellView(friend: friendDemoData.items.first!)
+            .previewLayout(PreviewLayout.sizeThatFits)
     }
 }
