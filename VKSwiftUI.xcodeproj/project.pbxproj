@@ -11,10 +11,16 @@
 		50455CD82820149600B90EA2 /* PhotoGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50455CD72820149600B90EA2 /* PhotoGallery.swift */; };
 		5046E21C28201CF700367ECE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E21B28201CF700367ECE /* MainView.swift */; };
 		5046E22028201D4200367ECE /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E21F28201D4200367ECE /* NewsFeedView.swift */; };
+		5046E2332823F1F400367ECE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E2322823F1F400367ECE /* WebView.swift */; };
 		504D392F281AB59200A7927A /* View+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D392E281AB59200A7927A /* View+Debug.swift */; };
 		504D3933281AB92A00A7927A /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D3932281AB92A00A7927A /* GroupCellView.swift */; };
 		504D3935281AB98900A7927A /* CircleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D3934281AB98900A7927A /* CircleShadow.swift */; };
 		504D3937281ABA2900A7927A /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D3936281ABA2900A7927A /* UserCellView.swift */; };
+		507F723C2823FE9C005FCC13 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F723B2823FE9C005FCC13 /* NetworkService.swift */; };
+		507F723E2823FEF1005FCC13 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F723D2823FEF1005FCC13 /* NetworkServiceProtocol.swift */; };
+		507F72402823FF30005FCC13 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F723F2823FF30005FCC13 /* AuthData.swift */; };
+		507F724228240036005FCC13 /* VKResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F724128240036005FCC13 /* VKResponse.swift */; };
+		507F724428240EC1005FCC13 /* LoginFromWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F724328240EC1005FCC13 /* LoginFromWebView.swift */; };
 		508367EB282013BF00E0C04E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508367EA282013BF00E0C04E /* Group.swift */; };
 		508367ED2820141500E0C04E /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508367EC2820141500E0C04E /* Friend.swift */; };
 		50BC57822816A9B900EE9000 /* VKSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC57812816A9B900EE9000 /* VKSwiftUIApp.swift */; };
@@ -52,10 +58,16 @@
 		50455CD72820149600B90EA2 /* PhotoGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGallery.swift; sourceTree = "<group>"; };
 		5046E21B28201CF700367ECE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5046E21F28201D4200367ECE /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
+		5046E2322823F1F400367ECE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		504D392E281AB59200A7927A /* View+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Debug.swift"; sourceTree = "<group>"; };
 		504D3932281AB92A00A7927A /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 		504D3934281AB98900A7927A /* CircleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadow.swift; sourceTree = "<group>"; };
 		504D3936281ABA2900A7927A /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		507F723B2823FE9C005FCC13 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		507F723D2823FEF1005FCC13 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		507F723F2823FF30005FCC13 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
+		507F724128240036005FCC13 /* VKResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKResponse.swift; sourceTree = "<group>"; };
+		507F724328240EC1005FCC13 /* LoginFromWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFromWebView.swift; sourceTree = "<group>"; };
 		508367EA282013BF00E0C04E /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		508367EC2820141500E0C04E /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		50BC577E2816A9B900EE9000 /* VKSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +132,16 @@
 			path = Extantions;
 			sourceTree = "<group>";
 		};
+		5046E2312823F17300367ECE /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				5046E2322823F1F400367ECE /* WebView.swift */,
+				507F723B2823FE9C005FCC13 /* NetworkService.swift */,
+				507F723D2823FEF1005FCC13 /* NetworkServiceProtocol.swift */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
 		504D3930281AB8D200A7927A /* ViewModifier */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +168,8 @@
 				508367EC2820141500E0C04E /* Friend.swift */,
 				50455CD52820145A00B90EA2 /* News.swift */,
 				50455CD72820149600B90EA2 /* PhotoGallery.swift */,
+				507F723F2823FF30005FCC13 /* AuthData.swift */,
+				507F724128240036005FCC13 /* VKResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +197,7 @@
 		50BC57802816A9B900EE9000 /* VKSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				5046E2312823F17300367ECE /* Sessions */,
 				5046E222282023F400367ECE /* Extantions */,
 				504D3931281AB8E800A7927A /* View */,
 				508367E9282013A400E0C04E /* Models */,
@@ -212,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				50BC57812816A9B900EE9000 /* VKSwiftUIApp.swift */,
+				507F724328240EC1005FCC13 /* LoginFromWebView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -359,16 +385,22 @@
 				50F24170282019B200599904 /* GroupListView.swift in Sources */,
 				504D3937281ABA2900A7927A /* UserCellView.swift in Sources */,
 				50F2416B2820183F00599904 /* FriendDetailView.swift in Sources */,
+				507F723C2823FE9C005FCC13 /* NetworkService.swift in Sources */,
 				50455CD82820149600B90EA2 /* PhotoGallery.swift in Sources */,
 				50455CD62820145B00B90EA2 /* News.swift in Sources */,
 				50F24167282017AE00599904 /* VkButtonStyle.swift in Sources */,
+				507F724228240036005FCC13 /* VKResponse.swift in Sources */,
 				504D3935281AB98900A7927A /* CircleShadow.swift in Sources */,
 				50F2417228201A5A00599904 /* LoginView.swift in Sources */,
 				5046E22028201D4200367ECE /* NewsFeedView.swift in Sources */,
 				504D392F281AB59200A7927A /* View+Debug.swift in Sources */,
+				507F724428240EC1005FCC13 /* LoginFromWebView.swift in Sources */,
+				507F723E2823FEF1005FCC13 /* NetworkServiceProtocol.swift in Sources */,
+				5046E2332823F1F400367ECE /* WebView.swift in Sources */,
 				504D3933281AB92A00A7927A /* GroupCellView.swift in Sources */,
 				50BC57822816A9B900EE9000 /* VKSwiftUIApp.swift in Sources */,
 				50F2416D2820191B00599904 /* FriendListView.swift in Sources */,
+				507F72402823FF30005FCC13 /* AuthData.swift in Sources */,
 				5046E21C28201CF700367ECE /* MainView.swift in Sources */,
 				508367ED2820141500E0C04E /* Friend.swift in Sources */,
 			);

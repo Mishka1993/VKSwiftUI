@@ -19,7 +19,8 @@ struct VKSwiftUIApp: App {
             if isLogin {
                 MainView()
             } else {
-                LoginView(isLogin: $isLogin)
+                LoginFromWebView(isLogin: $isLogin)
+                //LoginView(isLogin: $isLogin)
             }
         }
     }
