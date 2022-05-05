@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 struct GroupItems: Codable {
      var items: [Group]
@@ -42,3 +43,17 @@ struct GroupItems: Codable {
      Group(id: 5, name: "Mysql", screenName: "", photo: "", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...")
  ])
  #endif
+
+class GroupModelView: ObservableObject {
+    var groups: [Group] = []
+
+    internal let objectWillChange = ObjectWillChangePublisher()
+    private let networkService = NetworkService()
+
+    public func fetch() {
+        networkService.getGroups { [self] data in
+            self.groups = data
+            objectWillChange.send()
+        }
+    }
+}
