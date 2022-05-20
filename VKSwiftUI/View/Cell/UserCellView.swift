@@ -31,9 +31,14 @@ struct UserCellView: View {
 private extension UserCellView {
     
     var userAvatar: some View {
-        AsyncImage(url: friend.photoUrl)
-            .frame(width: 100, height: 100)
-            .modifier(CircleShadow(shadowColor: .orange, shadowRadius: 3))
+        AsyncImage(url: friend.photoUrl){ image in
+            image.resizable()
+        } placeholder: {
+            ProgressView()
+        }
+        .frame(width: 100, height: 100)
+        .modifier(CircleShadow(shadowColor: .orange, shadowRadius: 3))
+        .modifier(SpringAnimation())
     }
     
     var userFio: some View {
