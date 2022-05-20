@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500515272837A5E000AE4462 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500515262837A5E000AE4462 /* SpringAnimation.swift */; };
 		50455CD62820145B00B90EA2 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50455CD52820145A00B90EA2 /* News.swift */; };
 		50455CD82820149600B90EA2 /* PhotoGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50455CD72820149600B90EA2 /* PhotoGallery.swift */; };
 		5046E21C28201CF700367ECE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E21B28201CF700367ECE /* MainView.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500515262837A5E000AE4462 /* SpringAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		50455CD52820145A00B90EA2 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		50455CD72820149600B90EA2 /* PhotoGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGallery.swift; sourceTree = "<group>"; };
 		5046E21B28201CF700367ECE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				50BC57812816A9B900EE9000 /* VKSwiftUIApp.swift */,
 				507F724328240EC1005FCC13 /* LoginFromWebView.swift */,
+				500515262837A5E000AE4462 /* SpringAnimation.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				504D3937281ABA2900A7927A /* UserCellView.swift in Sources */,
 				50F2416B2820183F00599904 /* FriendDetailView.swift in Sources */,
 				507F723C2823FE9C005FCC13 /* NetworkService.swift in Sources */,
+				500515272837A5E000AE4462 /* SpringAnimation.swift in Sources */,
 				50455CD82820149600B90EA2 /* PhotoGallery.swift in Sources */,
 				50455CD62820145B00B90EA2 /* News.swift in Sources */,
 				50F24167282017AE00599904 /* VkButtonStyle.swift in Sources */,
