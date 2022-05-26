@@ -8,35 +8,33 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    private let friendViewModel = FriendModelView()
+    private let groupViewModel = GroupModelView()
+    
     var body: some View {
+        
+        UITabBarWrapper([
+                   TabBarElement(tabBarElementItem: .init(title: "Друзья", systemImageName: "person.2.fill")) {
+                       NavigationView {
+                           FriendListView(viewModel: friendViewModel)
+                       }
+                   },
+                   TabBarElement(tabBarElementItem: .init(title: "Группы", systemImageName: "rectangle.stack.person.crop")) {
+                       NavigationView {
+                           GroupListView(viewModel: groupViewModel)
+                       }
+                   },
+                   TabBarElement(tabBarElementItem: .init(title: "Лента", systemImageName: "rectangle.3.offgrid.bubble.left")) {
+                       NavigationView {
+                           NewsFeedView()
+                       }
+                   },
 
-             TabView {
-                 NavigationView {
-                     FriendListView(friendList: friendDemoData)
-                 }
-                 .tabItem {
-                     Image(systemName: "person.2.fill")
-                     Text("Друзья")
-                 }
-
-                 NavigationView {
-                     GroupListView(groupList: groupDemoData)
-                 }
-                 .tabItem {
-                     Image(systemName: "rectangle.stack.person.crop")
-                     Text("Группы")
-                 }
-
-                 NavigationView {
-                     NewsFeedView()
-                 }
-                 .tabItem {
-                     Image(systemName: "rectangle.3.offgrid.bubble.left")
-                     Text("Лента")
-                 }
-             }
-             .navigationBarBackButtonHidden(true)
-         }
+               ])
+                   .navigationBarBackButtonHidden(true)
+                   .ignoresSafeArea()
+    }
 }
 
 struct MainView_Previews: PreviewProvider {

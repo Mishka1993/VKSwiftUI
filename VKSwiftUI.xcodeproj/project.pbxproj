@@ -17,6 +17,8 @@
 		504D3933281AB92A00A7927A /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D3932281AB92A00A7927A /* GroupCellView.swift */; };
 		504D3935281AB98900A7927A /* CircleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D3934281AB98900A7927A /* CircleShadow.swift */; };
 		504D3937281ABA2900A7927A /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504D3936281ABA2900A7927A /* UserCellView.swift */; };
+		50757BE4283FBF1D00DAA3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50757BE3283FBF1D00DAA3DE /* AppDelegate.swift */; };
+		50757BE7283FBFA300DAA3DE /* TabBarElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50757BE6283FBFA300DAA3DE /* TabBarElementView.swift */; };
 		507F723C2823FE9C005FCC13 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F723B2823FE9C005FCC13 /* NetworkService.swift */; };
 		507F723E2823FEF1005FCC13 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F723D2823FEF1005FCC13 /* NetworkServiceProtocol.swift */; };
 		507F72402823FF30005FCC13 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F723F2823FF30005FCC13 /* AuthData.swift */; };
@@ -65,6 +67,8 @@
 		504D3932281AB92A00A7927A /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 		504D3934281AB98900A7927A /* CircleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadow.swift; sourceTree = "<group>"; };
 		504D3936281ABA2900A7927A /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		50757BE3283FBF1D00DAA3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50757BE6283FBFA300DAA3DE /* TabBarElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarElementView.swift; sourceTree = "<group>"; };
 		507F723B2823FE9C005FCC13 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		507F723D2823FEF1005FCC13 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		507F723F2823FF30005FCC13 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
@@ -156,11 +160,20 @@
 		504D3931281AB8E800A7927A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50757BE5283FBF8B00DAA3DE /* Components */,
 				50F24168282017E200599904 /* App */,
 				50F2416E2820193C00599904 /* Cell */,
 				5046E22128201DC900367ECE /* View */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		50757BE5283FBF8B00DAA3DE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				50757BE6283FBFA300DAA3DE /* TabBarElementView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		508367E9282013A400E0C04E /* Models */ = {
@@ -241,6 +254,7 @@
 				50BC57812816A9B900EE9000 /* VKSwiftUIApp.swift */,
 				507F724328240EC1005FCC13 /* LoginFromWebView.swift */,
 				500515262837A5E000AE4462 /* SpringAnimation.swift */,
+				50757BE3283FBF1D00DAA3DE /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -384,11 +398,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50757BE4283FBF1D00DAA3DE /* AppDelegate.swift in Sources */,
 				508367EB282013BF00E0C04E /* Group.swift in Sources */,
 				50F24170282019B200599904 /* GroupListView.swift in Sources */,
 				504D3937281ABA2900A7927A /* UserCellView.swift in Sources */,
 				50F2416B2820183F00599904 /* FriendDetailView.swift in Sources */,
 				507F723C2823FE9C005FCC13 /* NetworkService.swift in Sources */,
+				50757BE7283FBFA300DAA3DE /* TabBarElementView.swift in Sources */,
 				500515272837A5E000AE4462 /* SpringAnimation.swift in Sources */,
 				50455CD82820149600B90EA2 /* PhotoGallery.swift in Sources */,
 				50455CD62820145B00B90EA2 /* News.swift in Sources */,

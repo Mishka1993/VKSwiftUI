@@ -8,21 +8,30 @@
 import SwiftUI
 
 struct FriendListView: View {
-    var friendList = FriendItems(items: [])
-
-         var body: some View {
-             List(friendList.items) { friend in
-                 NavigationLink(destination: FriendDetailView(friend: friend)) {
-                     UserCellView(friend: friend)
-                 }
-             }
-             .listStyle(PlainListStyle())
-             .navigationTitle("Друзья")
-         }
+    @ObservedObject var viewModel: FriendModelView
+    init(viewModel: FriendModelView) {
+        self.viewModel = viewModel
+    }
+    
+    var body: some View {
+        List(viewModel.friends) { friend in
+            NavigationLink(destination: FriendDetailView(friend: friend)) {
+                UserCellView(friend: friend)
+            }
+        }
+        .listStyle(PlainListStyle())
+        .onAppear {
+            viewModel.fetch()
+        }
+        .navigationTitle("Друзья")
+    }
 }
 
 struct FriendListView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendListView(friendList: friendDemoData)
+        let viewModel = FriendModelView()
+        NavigationView {
+            FriendListView(viewModel: viewModel)
+        }
     }
 }
