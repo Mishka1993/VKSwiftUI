@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct VKSwiftUIApp: App {
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    
     @State var isLogin: Bool = true
     
     init() {
