@@ -15,7 +15,7 @@ struct FriendListView: View {
     
     var body: some View {
         List(viewModel.friends) { friend in
-            NavigationLink(destination: FriendDetailView(friend: friend)) {
+            NavigationLink(destination: FriendDetailView(friend: friend).environmentObject(viewModel)) {
                 UserCellView(friend: friend)
             }
         }
