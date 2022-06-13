@@ -242,12 +242,6 @@ class NetworkService: NetworkServiceProtocol {
                 error == nil,
                 let responseData = responseData
             else { return }
-
-            // debug
-//            let json = try? JSONSerialization.jsonObject(
-//                with: responseData,
-//                options: .fragmentsAllowed)
-//                print(json)
             do {
                 DispatchQueue.main.async {
                     completion(responseData)

@@ -58,6 +58,8 @@ let friendDemoData =  FriendItems(items: [
 
 class FriendModelView: ObservableObject {
     @Published var friends: [Friend] = []
+    @Published var gallery: [PhotoGallery] = []
+    
     private let networkService = NetworkService()
 
     public func fetch() {
@@ -65,4 +67,10 @@ class FriendModelView: ObservableObject {
             self.friends = data
         }
     }
+    
+    public func fetchGallery(ownerId: Int) {
+            networkService.getPhotos(ownerId: ownerId) { data in
+                self.gallery = data
+            }
+        }
 }

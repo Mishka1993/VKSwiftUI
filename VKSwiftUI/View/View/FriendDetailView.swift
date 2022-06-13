@@ -17,7 +17,7 @@ struct FriendDetailView: View {
                 userAvatar
                 userNickName
                 
-                UserGallery()
+                UserGallery(friend: friend)
                 Spacer()
             }
             .padding()
@@ -43,6 +43,8 @@ extension FriendDetailView {
 }
 
 private struct UserGallery: View {
+    var friend: Friend
+    @EnvironmentObject var viewModel: FriendModelView
     
     private let items = 1...5
     private let columns = [
